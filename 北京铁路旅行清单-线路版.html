@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>北京出发 · 铁路旅行清单</title>
+<style>
+:root{--paper:#f6f4ee;--ink:#22352f;--muted:#57665d;--line:#d6ddd2;--green:#245c49;--wash:#e8eee4;--orange:#995024}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 "Microsoft YaHei","PingFang SC",sans-serif}::selection{background:#c7dfb9;color:#182f22}a{color:var(--green);text-underline-offset:4px}button,input,select{font:inherit}button,a,input,select{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #b9662e;outline-offset:3px}header{max-width:1440px;margin:auto;padding:56px 48px 28px}.top{display:flex;justify-content:space-between;gap:24px;align-items:center}.brand{font-size:14px;letter-spacing:.1em}.edition{color:var(--muted);font-size:13px}h1{font-family:"STSong","SimSun",serif;font-size:clamp(36px,5vw,68px);line-height:1.2;font-weight:500;margin:36px 0 22px;letter-spacing:-.025em}h1 span{color:var(--green)}.intro{max-width:760px;color:var(--muted);margin:0}.scope{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 0}.scope span{font-size:13px;border:1px solid var(--line);padding:4px 10px}.layout{max-width:1440px;margin:auto;display:grid;grid-template-columns:228px minmax(0,1fr);gap:40px;padding:22px 48px 70px}aside{position:sticky;top:24px;align-self:start}.navtitle{font-size:13px;color:var(--muted);margin:0 0 12px}nav{display:grid;gap:3px}.routebtn{border:0;background:transparent;color:var(--ink);text-align:left;padding:10px 12px;border-radius:5px;display:flex;gap:10px;align-items:center;line-height:1.35}.routebtn:hover{background:#eceee5}.routebtn.active{background:var(--green);color:white}.dot{width:8px;height:8px;background:var(--route);border-radius:50%;flex-shrink:0}.active .dot{background:#d7edcb}.asidefoot{border-top:1px solid var(--line);padding-top:16px;margin-top:22px;font-size:13px;color:var(--muted)}.toolbar{display:grid;grid-template-columns:minmax(160px,1fr) 145px 140px;gap:10px;margin-bottom:12px}input,select{width:100%;min-height:46px;border:1px solid #bcc9bd;background:#fffdf7;color:var(--ink);padding:10px 12px;border-radius:5px}input::placeholder{color:#627064}.tools{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:0 0 20px;color:var(--muted);font-size:13px}.tools button{padding:4px 0;border:0;border-bottom:1px solid #a3b5a4;background:none;color:var(--green)}.tools .right{display:flex;gap:18px}label.check{display:flex;gap:7px;align-items:center}input[type=checkbox]{width:16px;min-height:16px;accent-color:var(--green);padding:0}section.route{margin-bottom:34px;border-top:2px solid var(--route)}.routehead{padding:22px 0 16px}.routehead h2{font-size:24px;margin:0 0 8px;line-height:1.4}.routehead p{margin:4px 0;color:var(--muted);font-size:14px}.path{display:flex;align-items:center;flex-wrap:wrap;gap:4px 0;margin:17px 0 3px}.stop{font-size:12px;padding:2px 10px 2px 0;display:inline-flex;align-items:center;gap:6px}.stop:before{content:"";width:7px;height:7px;border:2px solid var(--route);border-radius:50%}.stop:not(:last-child):after{content:"";display:block;width:15px;height:1px;background:var(--route);margin-left:2px}table{border-collapse:collapse;width:100%;table-layout:fixed}th{text-align:left;color:var(--muted);font-size:12px;font-weight:400;padding:9px 12px;background:var(--wash)}th:nth-child(1){width:23%}th:nth-child(2){width:43%}th:nth-child(3){width:34%}td{vertical-align:top;border-bottom:1px solid var(--line);padding:17px 12px;font-size:14px}td strong{display:block;font-size:16px;font-weight:600}small{display:block;font-size:12px;color:var(--muted);line-height:1.6;margin-top:4px}.tag{display:inline-block;font-size:11px;margin:6px 6px 0 0;color:var(--green)}.note{color:var(--muted);font-size:13px}.edge{display:inline-block;background:#f3e4d3;color:#834315;padding:0 6px;font-size:11px;margin:5px 0}.fav{border:1px solid #b6c8b7;background:transparent;color:var(--green);border-radius:4px;font-size:12px;padding:2px 7px;margin-top:9px}.fav[aria-pressed=true]{background:var(--green);color:#fff}.ref{font-size:12px;margin-top:10px;display:inline-block}.empty{padding:65px 20px;text-align:center;border:1px dashed var(--line)}footer{border-top:1px solid var(--line);margin-top:35px;padding-top:24px;font-size:13px;color:var(--muted)}details{margin:14px 0}summary{cursor:pointer;color:var(--ink)}.stations{display:grid;grid-template-columns:1fr 1fr;gap:5px 24px;margin:12px 0}.stations p{margin:4px 0}.sources{padding-left:20px}.sources li{margin:7px 0}.disclaimer{max-width:80ch}.status{font-variant-numeric:tabular-nums}button.clear{border:0;background:var(--green);color:#fff;border-radius:4px;padding:8px 14px;margin-top:12px}[hidden]{display:none!important}
+@media(max-width:950px){header{padding:30px 24px 20px}.layout{padding:12px 24px 40px;grid-template-columns:1fr;gap:24px}aside{position:static}nav{display:flex;overflow-x:auto;padding-bottom:8px;scrollbar-color:#91a98e transparent;scrollbar-width:thin}.routebtn{flex-shrink:0}.navtitle,.asidefoot{display:none}h1{margin-top:28px}.top{align-items:start}.edition{max-width:140px;text-align:right}.routehead h2{font-size:22px}}
+@media(max-width:600px){header{padding:24px 18px 14px}.layout{padding:10px 18px 32px;gap:14px}.intro{font-size:14px}.toolbar{grid-template-columns:1fr 1fr}.toolbar input{grid-column:1/-1}.tools{align-items:start;gap:10px}.tools .right{gap:14px}thead{display:none}table,tbody,tr,td{display:block;width:100%}tr{padding:17px 0;border-bottom:1px solid var(--line)}td{padding:0;border:0}td:nth-child(2){margin-top:10px}td:nth-child(3){margin-top:8px}td:nth-child(2):before{content:"看什么 · ";color:var(--green);font-size:12px}td:nth-child(3):before{content:"怎么去 · ";color:var(--green);font-size:12px}.fav{margin-top:6px}.stations{grid-template-columns:1fr}.scope{gap:6px}.scope span{font-size:11px}.path{margin-top:12px}}
+@media print{body{background:white;font-size:11px}header{padding:0 0 16px}h1{font-size:34px;margin:20px 0}aside,.toolbar,.tools,.fav,.empty{display:none}.layout{display:block;padding:0}section.route{break-inside:auto}.routehead{break-after:avoid}tr{break-inside:avoid}td{padding:8px;font-size:11px}td strong{font-size:12px}.routehead h2{font-size:18px}footer{font-size:11px}.scope span{font-size:10px}}
+</style></head><body>
+<header><div class="top"><div class="brand">北京出发 / 铁路旅行清单</div><div class="edition">资料整理 · 2026.11.18<br>离线可用的目的地目录</div></div><h1>沿着铁路，<br>去北京之外的<span>一千公里</span>。</h1><p class="intro">从出发站找到线路，再从沿线城市挑选风景。这里汇集上一轮研究中的主要目的地，保留支线、远郊接驳和千公里边界提示，方便慢慢选、分次去。</p><div class="scope"><span>主要客运走廊</span><span>城市 · 景点 · 接驳</span><span>铁路里程约 1000 km 内</span></div></header>
+<div class="layout"><aside><p class="navtitle">按方向浏览</p><nav id="nav" aria-label="铁路方向筛选"></nav><div class="asidefoot">箭头表示线路走向，不代表每班车都停靠。<br><br>收藏保存在当前浏览器，可随时取消。<br><a href="#notes">查看车站说明与资料来源</a></div></aside><main>
+<div class="toolbar"><input id="search" type="search" aria-label="搜索城市、景点、线路" placeholder="搜索城市或景点，如：大同、长城、海边"><select id="station" aria-label="按常见出发站筛选"><option value="">全部出发站</option></select><select id="theme" aria-label="按景点类型筛选"><option value="">全部景点类型</option></select></div>
+<div class="tools"><span id="status" class="status" tabindex="-1" role="status" aria-live="polite"></span><div class="right"><label class="check"><input id="onlyfav" type="checkbox">只看收藏</label><button id="reset">重置筛选</button><button id="print">打印 / 存为 PDF</button></div></div><div id="content"></div>
+<footer id="notes"><strong>读这份清单前，了解几个口径</strong><p class="disclaimer">1000 公里按从北京上车站到目的地下车站的铁路运行距离理解，非直线半径，不含去景区的汽车路程。本清单沿用上一轮研究的范围，未逐站核算精确营业里程；接近边界、不同走法可能超限的目的地单独标记。这里列的是目的地与线路关系，不是实时班次表，也不保证每一站均有北京直达车。</p>
+<details open><summary>北京八大客运站：快速对照</summary><div class="stations" id="stationguide"></div></details>
+<details><summary>其他值得关注的既有线与市郊线</summary><p>丰沙铁路：丰台方向—门头沟山区—官厅、沙城，关注永定河峡谷与山地铁路风景。京通铁路：昌平北—怀柔北—古北口—滦平、隆化—赤峰、通辽方向。京九既有线：霸州—任丘—衡水—聊城—菏泽，与新高铁站位置不同。通密线连接通州西、顺义、牛栏山、怀柔、密云北及怀柔北方向。以上小站乘降、具体客运开行及景区开放情况，应出发前核查。</p></details>
+<details open><summary>来源与更新说明</summary><p>以下链接对应上一轮研究所引用的官方线路资料和边界里程参考。景点是旅行选题清单；门票、开放时间、接驳班次未做实时确认。</p><ol class="sources" id="sources"></ol></details><p>实际班次、出发站和停靠站以 <a href="https://www.12306.cn/" target="_blank" rel="noopener">铁路 12306</a> 为准。页面中的“常见出发站”用于方向检索，不等于所有目的地均从该站直达。</p></footer>
+</main></div>
+<script>
+const sources=[
+['北京八大车站分工 · 北京市重点站区管委会','https://zdzqgw.beijing.gov.cn/zwgk/zqyw/202512/t20251228_4372304.html'],
+['北京通州站开通 · 铁科院转载国铁信息','https://www.rails.cn/content.php?contentid=68075'],
+['乌兰察布高铁与旅游 · 文化和旅游部','https://www.mct.gov.cn/wlbphone/wlbydd/xxfb/qglb/nmg/202308/t20230801_946328.html'],
+['集大原高铁开通 · 国务院国资委','https://wap.sasac.gov.cn/n2588025/n2588124/c32500109/content.html'],
+['石家庄、正定空铁联运与文旅 · 首都机场集团','https://www.cah.com.cn/content/2026/01-30/7422798297003200512.html'],
+['雄商高铁 2026 年 9 月开通 · 北京市政府','https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202609/t20260929_4884722.html'],
+['京唐、京滨线路与分岔 · 北京市政府','https://www.beijing.gov.cn/ywdt/zwzt/jjjyth/xy/202208/t20220813_2792095.html'],
+['2026 年京津冀铁路进展 · 北京市政府','https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202602/t20260222_4532422.html'],
+['京哈高铁站点与走向 · 承德市政府','https://www.chengde.gov.cn/art/2021/1/22/art_3248_682129.html'],
+['赤峰文旅资源 · 赤峰市政府','https://www.chifeng.gov.cn/ywdt/bmdt/202605/t20260527_2770881.html'],
+['蒙东文化旅游线路 · 文化和旅游部','https://www.mct.gov.cn/wlbphone/wlbydd/xxfb/qglb/nmg/202305/t20230519_943880.html'],
+['2026 年怀密线、S2 站点 · 北京市政府','https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202606/t20260615_4700120.html'],
+['长春西约 995 公里 · 第三方时刻资料，需复核','https://www.gaotie.com.cn/lieche/beijingchaoyang-changchunxi.html'],
+['大连北约 893 公里走法 · 第三方时刻资料，需复核','https://shike.gaotie.cn/checi.asp?checi=G3635%2FG3634'],
+['合肥南约 1000 公里 · 第三方时刻资料，需复核','https://skb.gaotie.cn/lieche.asp?from=%E5%90%88%E8%82%A5%E5%8D%97&page=2&to=%E5%8C%97%E4%BA%AC%E5%8D%97'],
+['潍坊方向旅游列车 · 北京日报','https://xinwen.bjd.com.cn/content/s67ff9a00e4b068c68f1275c3.html']];
+const stationGuide={'北京站':'京哈既有线、京沪既有线及部分跨线动车；沿海、东北、山东方向。','北京南':'京津城际、京沪高铁及跨线；天津、山东、徐州方向。','北京西':'京广高铁、京广既有线、京雄城际接雄商高铁。','北京丰台':'京广、京九、丰沙等既有线及部分高铁动车；河北、山西、河南等方向。','北京北':'京张高铁、怀密线；张家口、大同、内蒙古、怀密方向。','清河':'京张高铁、怀密线；与北京北站方向相近。','北京朝阳':'京哈高铁及赤喀、通新等跨线；承德、蒙东、东北方向。','北京通州':'京唐城际、京滨已开通区段及跨线；唐山、北辰、秦皇岛方向。'};
+// 数据格式：城市 | 下车站或走法 | 景点 | 类型 | 接驳提示 | 可选边界标记
+const routes=[
+{name:'西北 · 长城与草原',line:'京张高铁 → 张呼高铁 → 呼包方向',color:'#39755b',stations:['北京北','清河'],path:'北京/八达岭/怀来/张家口/乌兰察布/呼和浩特/包头',refs:[2],rows:`八达岭|八达岭长城|八达岭长城|长城|铁路与景区衔接较好，仍需步行及景区交通。
+延庆|延庆站 · 京张支线|龙庆峡、世园公园、妫河|山水|支线目的地，需公交或打车。
+怀来|东花园北、怀来|官厅水库、鸡鸣驿古城|山水 古城|景点分散，按目的地选择下车站。
+张家口|张家口|大境门、堡子里|长城 古城|市区游较方便。
+崇礼|太子城、崇礼 · 支线|滑雪场、冬奥场馆、山地度假|滑雪 山水|度假区通常有接驳，提前核实。
+乌兰察布|乌兰察布|辉腾锡勒草原、黄花沟、乌兰哈达火山|草原 山水|草原、火山远离市区，需安排汽车段。
+呼和浩特|呼和浩特东、呼和浩特|大召、塞上老街、内蒙古博物院|古建 博物馆|适合公共交通城市游。
+包头|包头、包头东|赛汗塔拉、北方兵器城、五当召|草原 古建 博物馆|五当召在远郊，需另行接驳。`},
+{name:'山西 · 古建与石窟',line:'京张接大张、集大原；或京广接石太、大西',color:'#9c633e',stations:['北京北','清河','北京西','北京丰台'],path:'北京/大同/应县/朔州/忻州/太原/平遥/临汾/运城',refs:[3],note:'两条走法：北线经张家口、大同；南线经石家庄、太原。下列为沿线与周边目的地，非一班车的停站顺序。',rows:`大同|大同南|云冈石窟、华严寺、善化寺、大同古城|古建 石窟 古城|古城与云冈分开安排交通。
+浑源|大同等站转汽车|悬空寺、恒山|古建 山水|浑源不在大同市区，需县际汽车接驳。
+应县|应县西|应县木塔、净土寺|古建|需接驳进县城。
+朔州|朔州东|崇福寺、朔州老城|古建 古城|高铁站至市区需接驳。
+忻州|忻州西|忻州古城；远郊五台山|古城 古建 山水|五台山离城区远，应单独安排。
+太原|太原南、太原|晋祠、山西博物院、双塔寺|古建 博物馆|晋祠位于远郊，留足交通时间。
+晋中、太谷、祁县|晋中、太谷西、祁县东等|常家庄园、太谷古城、乔家大院|古建 古城|几个县市分散，按景点选择下车站。
+平遥|平遥古城|平遥古城、双林寺、镇国寺|古城 古建|高铁站在古城外，寺庙需分别接驳。
+介休|介休东|绵山、张壁古堡|山水 古建|适合汽车串联。
+灵石|灵石东|王家大院|古建|需公路接驳。
+临汾、洪洞|临汾西、洪洞西|广胜寺、大槐树；隰县小西天|古建|小西天在隰县，距临汾较远。
+运城|运城北|解州关帝庙、盐湖、芮城永乐宫|古建 山水|景点跨县，需汽车段；不同走法需核算里程。|边界复核`},
+{name:'中原 · 博物馆与古都',line:'京广高铁；郑州接徐兰高铁东西分支',color:'#a04c36',stations:['北京西','北京丰台'],path:'北京/保定/石家庄/邯郸/安阳/新乡/郑州/洛阳或开封',refs:[4],rows:`涿州|涿州东等|涿州古城、三义宫|古城 古建|近程历史文化游，需站外交通。
+保定|保定东、保定|直隶总督署、古莲花池|古建|适合周末城市游，注意新老站区别。
+定州|定州东、定州|开元寺塔、定州博物馆、贡院|古建 博物馆|适合一天集中游览。
+石家庄、正定|石家庄、正定、正定机场|河北博物院、隆兴寺、正定古城|博物馆 古建 古城|正定机场站不在古城边，三站位置不同。
+邢台|邢台东等|邢台博物馆、开元寺、太行山景区|博物馆 古建 山水|山区景点需较长公路接驳。
+邯郸|邯郸东、邯郸|丛台、广府古城、响堂山石窟|古城 石窟|景点分散，适合分区游览。
+安阳、林州|安阳东等，林州转汽车|殷墟、中国文字博物馆、红旗渠、太行大峡谷|遗址 博物馆 山水|林州不在安阳市区，须县际接驳。
+鹤壁|鹤壁东|浚县古城、大伾山、云梦山|古城 山水|县域游需接驳。
+新乡|新乡东等|八里沟、万仙山、郭亮村|山水|高铁后仍有进山汽车路程。
+郑州、登封|郑州东、郑州，登封转汽车|河南博物院、少林寺、嵩山|博物馆 古建 山水|登封不在郑州市区。
+洛阳|洛阳龙门 · 郑州向西支线|龙门石窟、白马寺、洛阳博物馆、隋唐洛阳城|石窟 古建 博物馆|适合两三天，属郑州向西分支。
+开封|开封北 · 郑州向东支线|清明上河园、开封府、铁塔、大相国寺|古城 古建|适合两天，属郑州向东分支。
+许昌|许昌东|曹魏古城、春秋楼|古城 古建|京广主干继续向南。
+漯河|漯河西|许慎文化园|文化|需站外接驳。
+驻马店|驻马店西|嵖岈山|山水|山地景区需汽车接驳。`},
+{name:'鲁西 · 运河与水浒',line:'京雄城际 → 雄商高铁；另有京九普速走廊',color:'#587a72',stations:['北京西'],path:'北京/雄安/任丘/衡水/临清/聊城/梁山/菏泽/商丘',refs:[5],note:'雄商高铁已于 2026 年 9 月 28 日开通；新高铁站与京九老站位置不同。',rows:`雄安|雄安|白洋淀、城市建设与公共文化空间|山水 文化|白洋淀季节性强，需安排陆路及游船交通。
+任丘、河间|任丘西、肃宁河间|鄚州庙、河间府署|古建|按具体景点选站，需公路接驳。
+深州|深州东|深州蜜桃观光区域、地方历史文化|田园 文化|田园观光依花期、果期，需当地交通。
+衡水|衡水南|衡水湖、冀州古城|山水 古城|湖区需公路接驳。
+临清|临清东|运河钞关、舍利宝塔、鳌头矶|运河 古建|适合运河文化主题。
+聊城|聊城西|东昌湖、光岳楼、山陕会馆|山水 古建 运河|适合周末慢游。
+梁山|梁山|水泊梁山|山水 文化|到站后需接驳。
+郓城|郓城|水浒好汉城|文化|可与梁山串联，关注新老站交通。
+菏泽|菏泽东|曹州牡丹园、曹州古城|田园 古城|牡丹以春季花期为重点。
+商丘|商丘|商丘古城、应天书院|古城 古建|古城与车站间需接驳。`},
+{name:'东南 · 泉城与泰山',line:'京沪高铁；蚌埠接合蚌方向',color:'#467b8c',stations:['北京南'],path:'北京/廊坊/沧州/德州/济南/泰安/曲阜/徐州/蚌埠/滁州',refs:[14],note:'南京南常见走法约 1023 公里，严格千公里范围不收入。合肥南处于边界，单独标记。',rows:`廊坊|廊坊|廊坊博物馆、只有红楼梦·戏剧幻城|博物馆 文化|适合短途，剧场需提前确认演出安排。
+沧州|沧州西|大运河、沧州铁狮子|运河 古建|铁狮子在市区外。
+德州|德州东|董子园；齐河方向泉城欧乐堡|文化|齐河与德州市区不能套用同一交通方案。
+济南|济南西|趵突泉、大明湖、千佛山、山东博物馆|山水 博物馆|济南西站距老城区较远。
+泰安|泰安|泰山、岱庙|山水 古建|泰安站是高铁站，泰山站是普速站。
+曲阜|曲阜东|孔庙、孔府、孔林|古建 文化|需接驳入城。
+滕州|滕州东|滕州博物馆、墨子纪念馆、微山湖红荷湿地|博物馆 山水|湿地离城区较远，赏荷有季节性。
+枣庄|枣庄|台儿庄古城、铁道游击队景区|古城 文化|台儿庄距高铁站较远。
+徐州|徐州东|徐州博物馆、龟山汉墓、汉文化景区、云龙湖|博物馆 遗址 山水|适合两天城市游。
+宿州、萧县|宿州东或萧县相关站点|皇藏峪|山水|皇藏峪在萧县，不宜直接按宿州市区规划。
+蚌埠|蚌埠南|龙子湖、蚌埠博物馆、张公山|山水 博物馆|适合城市休闲。
+滁州|滁州|琅琊山、醉翁亭|山水 古建|高铁站至景区需接驳。
+合肥|合肥南 · 合蚌分支|安徽博物院、包公园、三河古镇|博物馆 古城|约 1000 公里边界，按具体车次走法确认；三河在远郊。|边界复核`},
+{name:'山东 · 齐鲁与海岸',line:'济南接胶济、济青方向；曲阜东接日兰高铁',color:'#3a789b',stations:['北京南','北京站'],path:'济南/淄博/青州/潍坊/青岛 · 曲阜东/临沂/日照',refs:[15],note:'两个分支合并展示，非一条连续线路；不同列车经停的新老车站不同。',rows:`淄博|淄博、淄博北|周村古商城、齐文化博物院、海岱楼|古城 博物馆|景点分布在不同城区，按行程选站。
+青州|青州市、青州市北|青州古城、青州博物馆、云门山|古城 博物馆 山水|新老站位置不同。
+潍坊|潍坊、潍坊北|风筝博物馆、十笏园、杨家埠|博物馆 古建 文化|按列车走法与景点位置选站。
+青岛|青岛、青岛北等|栈桥、八大关、老城、啤酒博物馆、崂山|海边 博物馆 山水|老城区与崂山宜分天安排。
+泗水、蒙山区域|泗水南、蒙山等 · 日兰分支|尼山周边、蒙山|山水 文化|按具体景区位置选择站点。
+临沂|临沂北|王羲之故居、银雀山汉墓竹简博物馆、沂蒙山区域|博物馆 山水 文化|沂蒙山景点跨县，需汽车段。
+日照|日照西|万平口、海滨森林公园、东夷小镇|海边|高铁站到海滨需接驳。
+济宁|济宁北等 · 日兰向西分支|太白楼、济宁博物馆|博物馆 运河|与临沂、日照属于曲阜东西不同分支。`},
+{name:'津冀 · 城际与海滨',line:'京津城际、京唐城际、京滨已开通区段及津秦跨线',color:'#578b86',stations:['北京南','北京通州','北京站'],path:'北京/天津 · 北京通州/香河/宝坻/唐山/北戴河/山海关',refs:[1,6,7],note:'京滨仅按已核实的宝坻—北辰区段整理，不把天津机场、滨海西规划全段视为已运营。',rows:`天津市区|天津 · 京津城际|五大道、海河、古文化街|城市 运河 古建|首次游老城可优先比较天津站，天津南与北辰站较远。
+武清|武清 · 京津城际|佛罗伦萨小镇、城区休闲|城市|适合近程休闲，具体目的地另查交通。
+天津滨海|滨海等 · 京津延伸方向|国家海洋博物馆、泰达航母主题公园|海边 博物馆|滨海地域大，景点之间仍有较长汽车路程。
+香河|香河 · 京唐城际|地方文化与休闲|文化|按实际目的地核对接驳。
+宝坻、北辰|宝坻、北辰|宝坻地方文化、天津北部休闲|文化 城市|宝坻是京唐、京滨分岔；北辰不是天津老城站。
+唐山|唐山、唐山西|南湖、开滦国家矿山公园、河头老街|山水 博物馆 城市|景点跨城区，注意唐山西与唐山站区别。
+北戴河、昌黎|北戴河、昌黎等|海滨、鸽子窝、阿那亚|海边|阿那亚在昌黎方向，需接驳并确认预约规则。
+秦皇岛、山海关|秦皇岛、山海关|老龙头、山海关古城、海滨|长城 古城 海边|按海滨与长城分区安排。`},
+{name:'东北 · 承德到长春',line:'京哈高铁',color:'#616b9c',stations:['北京朝阳'],path:'北京/兴隆/承德/平泉/喀左/辽宁朝阳/阜新/沈阳/四平/长春西',refs:[8,12],note:'北京朝阳与辽宁朝阳是不同城市的车站；北京至沈阳正线约 698 公里。',rows:`怀柔、密云|怀柔南、密云|雁栖湖、红螺寺、古北水镇、司马台长城|山水 长城 古建|景点分散，某些行程选择怀密线更合适。
+兴隆|兴隆县西|兴隆山、雾灵山|山水|需核查山区交通及开放季节。
+承德|承德南|避暑山庄、普陀宗乘之庙、普宁寺|古建 山水|承德南站需进城。
+平泉|平泉北|辽河源|山水|自然景区需汽车接驳。
+凌源、建平|牛河梁|牛河梁国家考古遗址公园|遗址 博物馆|确认展馆与遗址实际开放范围。
+辽宁朝阳|辽宁朝阳|朝阳双塔、鸟化石国家地质公园|古建 博物馆|适合历史、古生物主题。
+北票|北票|鸟化石相关场馆、大黑山|博物馆 山水|按具体景点安排接驳。
+阜新|阜新|海棠山、瑞应寺、矿山遗址景观|古建 山水 遗址|景点较分散，需分别确认开放。
+沈阳|沈阳、沈阳北|沈阳故宫、张学良旧居、辽宁省博物馆、北陵|古建 博物馆|适合两三天城市游。
+铁岭|铁岭西等|银冈书院、龙首山|古建 山水|需接驳进市区。
+四平|四平东|四平战役纪念馆、叶赫古城|博物馆 古城|叶赫古城位于市外。
+长春|长春西|伪满皇宫、长影旧址、净月潭|博物馆 山水|第三方里程资料约 995 公里；按终到站及车次复核。|边界复核`},
+{name:'蒙东 · 赤峰与通辽',line:'京哈高铁接赤喀高铁、通新高铁',color:'#887545',stations:['北京朝阳'],path:'北京/承德/喀左/赤峰 · 新民北方向/通辽',refs:[9,10],rows:`赤峰|赤峰 · 赤喀分支|赤峰博物馆、红山文化、玉龙沙湖|博物馆 沙漠 遗址|玉龙沙湖离市区较远，需公路接驳。
+克什克腾、乌兰布统|赤峰后转长途汽车|克什克腾石阵、达里湖、乌兰布统草原|草原 山水|高铁到赤峰不等于到景区，常需数小时汽车段。
+通辽|通辽 · 通新分支|通辽博物馆、孝庄园|博物馆 文化|孝庄园在市区外。
+科左后旗、库伦|通辽及相关站点转汽车|大青沟、库伦银沙湾|山水 沙漠|跨旗县公路接驳；核对具体车站更合适。`},
+{name:'辽宁 · 海岸与边城',line:'辽西沿海走廊、盘营等联络线；京哈接沈丹客专',color:'#446c8c',stations:['北京站','北京南','北京朝阳'],path:'秦皇岛/兴城/锦州/盘锦/营口/大连 · 沈阳/本溪/丹东',refs:[13],note:'沿海、大连、丹东为不同分支。北京出发的走法不同，铁路里程可能明显变化。',rows:`葫芦岛、兴城|葫芦岛北、兴城西等|兴城古城、海滨|古城 海边|新老站位置不同，按目的地选站。
+锦州、义县|锦州南等，义县转车|笔架山、奉国寺|海边 古建|奉国寺在义县，与锦州市区不同。
+盘锦|盘锦等|红海滩|山水 海边|颜色与季节、天气有关，需景区接驳。
+营口、鲅鱼圈|营口东、鲅鱼圈等|辽河老街、山海广场|海边 城市|营口市区与鲅鱼圈分开规划。
+大连|大连北、大连|星海广场、滨海路、金石滩、旅顺|海边 城市|存在约 893 公里走法，也有超千公里绕行；旅顺、金石滩较远。|走法复核
+本溪|本溪 · 沈丹分支|本溪水洞、关门山|山水|两个景区都需汽车段。
+凤城|凤城东 · 沈丹分支|凤凰山|山水|登山行程留足站外接驳与返程时间。
+丹东|丹东 · 沈丹分支|鸭绿江断桥、虎山长城|长城 城市|虎山长城在远郊；临界行程按实际车次核算。|走法复核`},
+{name:'近郊 · 山区慢旅行',line:'怀密线、S2、通密线与京原铁路',color:'#6d8351',stations:['北京北','清河','北京丰台'],path:'北京北/雁栖湖/怀柔北/古北口 · 南口/八达岭/延庆 · 十渡/涞源',refs:[11],note:'本组也包含南口、通州西等站出发的线路；在八大站筛选下仅显示常见关联方向。山区既有线的具体开行与小站乘降须另查。',rows:`怀柔|雁栖湖、怀柔北 · 怀密线|雁栖湖、红螺寺、青龙峡|山水 古建|适合铁路加短程接驳，核对回程班次。
+古北口|古北口 · 怀密线|古北口长城、古北水镇、司马台长城|长城 古城|古北水镇需再接驳，非出站即到。
+八达岭、延庆|南口起乘 S2，或京张高铁|八达岭长城、延庆休闲、关沟风景|长城 山水|S2 与高铁的车站、票制不同。
+顺义、怀柔、密云|通州西起乘通密线|牛栏山及怀密区域短途|文化 山水|非八大站始发，需核对分支终点。
+十渡|十渡 · 京原走廊|拒马河、十渡山水|山水|先查铁路开行、小站乘降与景区开放情况。
+野三坡、百里峡|野三坡、百里峡 · 京原走廊|峡谷、拒马河沿线|山水|不可仅凭铁路经过就认定当天可乘车到达。
+涞源|涞源 · 京原走廊|白石山|山水|铁路之外需进山公路接驳。
+灵丘|灵丘 · 京原走廊|觉山寺、平型关相关历史文化|古建 文化|先核对列车及站外交通。`}
+];
+const $=s=>document.querySelector(s);const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let selected=-1,favs=new Set();try{favs=new Set(JSON.parse(localStorage.getItem('beijing-rail-favs')||'[]'))}catch(e){}
+routes.forEach((r,i)=>r.items=r.rows.split('\n').map((row,j)=>{const [city,stop,sights,tags,note,edge]=row.split('|');return {id:i+'-'+j,city,stop,sights,tags:tags.split(' '),note,edge}}));
+const themes=[...new Set(routes.flatMap(r=>r.items.flatMap(x=>x.tags)))].sort((a,b)=>a.localeCompare(b,'zh'));
+$('#station').innerHTML+=Object.keys(stationGuide).map(x=>'<option>'+x+'</option>').join('');$('#theme').innerHTML+=themes.map(x=>'<option>'+x+'</option>').join('');
+$('#stationguide').innerHTML=Object.entries(stationGuide).map(([k,v])=>'<p><strong>'+esc(k)+'</strong><br>'+esc(v)+'</p>').join('');
+$('#sources').innerHTML=sources.map(([title,url])=>'<li><a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(title)+'</a></li>').join('');
+function drawNav(){ $('#nav').innerHTML=[[-1,'全部线路', '#245c49'],...routes.map((r,i)=>[i,r.name,r.color])].map(([i,n,c])=>'<button class="routebtn '+(i===selected?'active':'')+'" data-route="'+i+'" aria-pressed="'+(i===selected)+'" style="--route:'+c+'"><span class="dot"></span>'+n+'</button>').join(''); }
+function render(){let count=0,groups=0;const q=$('#search').value.trim().toLowerCase(),station=$('#station').value,theme=$('#theme').value,only=$('#onlyfav').checked;let html='';
+routes.forEach((r,i)=>{if(selected!==-1&&selected!==i||station&&!r.stations.includes(station))return;const items=r.items.filter(x=>(!theme||x.tags.includes(theme))&&(!only||favs.has(x.id))&&(!q||[r.name,r.line,x.city,x.stop,x.sights,x.note,x.tags.join(' ')].join(' ').toLowerCase().includes(q)));if(!items.length)return;count+=items.length;groups++;
+html+='<section class="route" style="--route:'+r.color+'"><div class="routehead"><h2>'+esc(r.name)+'</h2><p>'+esc(r.line)+' · 常见出发：'+r.stations.map(esc).join(' / ')+'</p><div class="path" aria-label="线路走向">'+r.path.split('/').map(s=>'<span class="stop">'+esc(s)+'</span>').join('')+'</div>'+(r.note?'<p>'+esc(r.note)+'</p>':'')+'</div><table><thead><tr><th>目的地 / 下车站</th><th>沿线看什么</th><th>接驳与提示</th></tr></thead><tbody>'+items.map(x=>'<tr><td><strong>'+esc(x.city)+'</strong><small>'+esc(x.stop)+'</small><button class="fav" data-id="'+x.id+'" aria-label="'+(favs.has(x.id)?'取消收藏':'收藏')+esc(x.city)+'" aria-pressed="'+favs.has(x.id)+'">'+(favs.has(x.id)?'已收藏':'收藏')+'</button></td><td>'+esc(x.sights)+'<div>'+x.tags.map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+'</div></td><td class="note">'+esc(x.note)+(x.edge?'<br><span class="edge">'+esc(x.edge)+'</span>':'')+'</td></tr>').join('')+'</tbody></table>'+r.refs.map(n=>'<a class="ref" href="'+esc(sources[n][1])+'" target="_blank" rel="noopener">'+esc(sources[n][0])+'</a>').join(' · ')+'</section>';});
+$('#content').innerHTML=html||'<div class="empty"><strong>没有匹配的目的地</strong><p>试试其他关键词，或清除出发站、类型和收藏筛选。</p><button class="clear" data-reset>清除全部筛选</button></div>';$('#status').textContent=groups+' 条方向 · '+count+' 个目的地条目'+(only?' · 收藏视图':'');}
+function reset(){selected=-1;$('#search').value='';$('#station').value='';$('#theme').value='';$('#onlyfav').checked=false;drawNav();render()}
+$('#nav').addEventListener('click',e=>{const b=e.target.closest('[data-route]');if(!b)return;selected=Number(b.dataset.route);drawNav();render();$('[data-route="'+selected+'"]').focus({preventScroll:true})});
+$('#content').addEventListener('click',e=>{if(e.target.closest('[data-reset]'))return reset();const b=e.target.closest('[data-id]');if(!b)return;const id=b.dataset.id;favs.has(id)?favs.delete(id):favs.add(id);try{localStorage.setItem('beijing-rail-favs',JSON.stringify([...favs]))}catch(e){}if($('#onlyfav').checked){render();$('#status').focus({preventScroll:true})}else{b.setAttribute('aria-pressed',String(favs.has(id)));b.textContent=favs.has(id)?'已收藏':'收藏';const item=routes.flatMap(r=>r.items).find(x=>x.id===id);b.setAttribute('aria-label',(favs.has(id)?'取消收藏':'收藏')+item.city)}});
+$('#search').addEventListener('input',render);['station','theme','onlyfav'].forEach(id=>$('#'+id).addEventListener('change',render));$('#reset').onclick=reset;$('#print').onclick=()=>window.print();drawNav();render();
+</script></body></html>

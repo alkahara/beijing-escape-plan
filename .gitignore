@@ -1,0 +1,9 @@
+.impeccable/
+.playwright-mcp/
+.preview-edge/
+__pycache__/
+*.png
+PRODUCT.md
+DESIGN.md
+.DS_Store
+Thumbs.db
