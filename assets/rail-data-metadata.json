@@ -1,0 +1,15 @@
+{
+  "source": "OpenStreetMap",
+  "license": "ODbL 1.0",
+  "osmDate": "2026-11-19T10:09:41Z",
+  "built": "2026-11-19T10:19:05.923777+00:00",
+  "center": [
+    116.4074,
+    39.9042
+  ],
+  "radiusKm": 1000,
+  "query": "[out:json][timeout:180];(\nway[railway=rail][!service](around:1000000,39.9042,116.4074);\nnode[railway=station][station!=subway][subway!=yes](around:1000000,39.9042,116.4074);\n);out geom;",
+  "wayCount": 111075,
+  "stationCount": 5335,
+  "vertices": 765939
+}

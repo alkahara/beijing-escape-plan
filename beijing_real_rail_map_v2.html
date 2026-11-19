@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f4ee">
+<title>铁路地图 · 北京周边逃逸行动</title>
+<link href="assets/maplibre-gl.css" rel="stylesheet">
+<link href="assets/rail-map.css" rel="stylesheet">
+</head>
+<body>
+<header><h1>北京周边逃逸行动 <span>铁路地图</span></h1><a href="index.html">目的地清单</a></header>
+<main>
+<div id="map" aria-label="可缩放的真实地理铁路地图"></div>
+<aside id="map-panel" aria-label="铁路与旅行时长">
+  <form id="search-form" class="search"><label for="station-search" class="sr-only">搜索铁路车站</label><input id="station-search" list="station-options" placeholder="搜索车站，如北京南、济南西" autocomplete="off" required><button type="submit">定位</button></form>
+  <datalist id="station-options"></datalist>
+  <div class="controls"><label for="rail-kind" class="sr-only">铁路类型</label><select id="rail-kind" disabled><option value="all">全部铁路</option><option value="fast">高速铁路</option><option value="normal">其他铁路</option></select><button id="overview" type="button">1000 km 总览</button></div>
+  <div class="legend"><span><i class="fast"></i>高速铁路</span><span><i></i>其他铁路</span></div>
+  <p id="status" role="status">正在加载轨道…</p>
+  <section id="editor" hidden aria-labelledby="station-title">
+    <div class="section-head"><h2 id="station-title"></h2><button type="button" id="close-editor" aria-label="关闭车站记录">关闭</button></div>
+    <p id="station-note" class="muted"></p>
+    <form id="time-form">
+      <input id="record-id" type="hidden">
+      <label for="origin">出发站</label><select id="origin" required></select>
+      <div class="form-pair"><label>乘车时长 / 分钟<input id="duration" type="number" min="1" max="10080" step="1" placeholder="如 95" required></label><label>车次<input id="train" maxlength="30" placeholder="如 G123"></label></div>
+      <div class="form-pair"><label>乘车日期<input id="travel-date" type="date"></label><label>来源 / 备注<input id="note" maxlength="200" placeholder="如 12306 查询"></label></div>
+      <div class="form-actions"><button class="primary" type="submit">保存时长</button><button type="button" id="new-record" hidden>另记一班</button><button type="button" id="delete-record" hidden>删除记录</button></div>
+    </form>
+  </section>
+  <section class="records" aria-labelledby="records-title"><div class="section-head"><h2 id="records-title">已记录 <span id="record-count">0</span></h2><button id="export" type="button">导出</button><button id="import" type="button">导入</button><input type="file" id="import-file" accept="application/json,.json" hidden></div>
+    <label for="time-origin" class="sr-only">按出发站筛选时长</label><select id="time-origin"><option value="">北京各站出发</option></select>
+    <p class="muted" id="empty-records">点击车站记录时长，保存后直接显示在地图上。</p><div id="record-list"></div>
+  </section>
+  <details class="sources"><summary>数据与范围</summary><p>轨道来自 OpenStreetMap 原始坐标；缩小显示总览，放大查看弯道。保留铁路主轨道，排除地铁、有轨电车和标注为调车侧线的轨道；不是车次导航。</p><p>虚线为北京中心直线半径 1000 km，不代表铁路里程。铁路可能含货运线；站点不保证有客运班次。</p><p>高速分类按 OSM highspeed 标记或限速 ≥ 200 km/h；缺少标记的归入其他铁路。地图时长均为你的记录，同站显示当前出发站筛选下最短的一条。</p><p>记录保存在当前浏览器，导出可备份或跨设备导入。底图需联网，轨道与车站已随页面保存。坐标 WGS84，底图采用 Web Mercator 投影。</p><p id="data-meta"></p><p><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors · ODbL</a> · <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap 底图</a></p></details>
+</aside>
+<button id="panel-toggle" type="button" aria-expanded="true" aria-controls="map-panel">收起面板</button>
+</main>
+<script src="assets/maplibre-gl.js"></script>
+<script src="assets/rail-basemap.js"></script>
+<script src="assets/rail-data.js"></script>
+<script src="assets/rail-map.js"></script>
+</body>
+</html>

@@ -1,9 +1,14 @@
 .impeccable/
 .playwright-mcp/
 .preview-edge/
+.preview-edge-rail/
 __pycache__/
 *.png
 PRODUCT.md
 DESIGN.md
 .DS_Store
 Thumbs.db
+.rail-cache/
+rail-osm-source.json
+rail-test.json
+rail-sample.pbf
